@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Syed Ukasha Shahid</title>
+  <meta name="description" content="Portfolio of Syed Ukasha Shahid, BS Computer Science student at Qarshi University, Lahore.">
+  <meta name="theme-color" content="#191919">
+
+  <!-- Fonts: Bricolage Grotesque (headings) + Instrument Sans (text).
+       If you are offline, the page falls back to your system fonts automatically. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ============================== TOP NAVIGATION ============================== -->
+  <header class="topbar">
+    <button class="brand" type="button" data-go="home" aria-label="Syed Ukasha Shahid, go to Home">
+      <span class="monogram" aria-hidden="true">US</span>
+      <span class="wordmark" aria-hidden="true">ukasha<span class="dot">.</span>shahid</span>
+    </button>
+
+    <!-- On small screens this button opens the section list as a drop-down -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <nav class="nav" aria-label="Portfolio sections">
+      <ol class="nav__list" id="nav-list">
+        <li><button class="nav__link" type="button" data-go="home"      aria-controls="panel-home"><span class="nav__num" aria-hidden="true">01</span>Home</button></li>
+        <li><button class="nav__link" type="button" data-go="about"     aria-controls="panel-about"><span class="nav__num" aria-hidden="true">02</span>About</button></li>
+        <li><button class="nav__link" type="button" data-go="skills"    aria-controls="panel-skills"><span class="nav__num" aria-hidden="true">03</span>Skills</button></li>
+        <li><button class="nav__link" type="button" data-go="projects"  aria-controls="panel-projects"><span class="nav__num" aria-hidden="true">04</span>Projects</button></li>
+        <li><button class="nav__link" type="button" data-go="education" aria-controls="panel-education"><span class="nav__num" aria-hidden="true">05</span>Education</button></li>
+        <li><button class="nav__link" type="button" data-go="contact"   aria-controls="panel-contact"><span class="nav__num" aria-hidden="true">06</span>Contact</button></li>
+      </ol>
+    </nav>
+  </header>
+
+  <!-- ============================== MAIN STAGE ==============================
+       Every section is a <section class="panel"> inside this one stage.
+       Only the panel with the class "is-active" is visible. script.js swaps it. -->
+  <main class="stage" id="stage">
+
+    <!-- ---------- 01 HOME ---------- -->
+    <section class="panel panel--home is-active" id="panel-home" data-panel="home" aria-labelledby="home-title">
+      <div class="home">
+        <div class="home__text">
+          <p class="kicker reveal">Computer science student · Aspiring software developer</p>
+          <h1 class="home__title reveal" id="home-title" tabindex="-1">Building practical ideas into digital experiences.</h1>
+          <p class="home__intro reveal">I'm Syed Ukasha Shahid, a BS Computer Science student at Qarshi University, Lahore. I enjoy exploring software development, programming, and web technologies while building practical projects that strengthen my technical skills.</p>
+
+          <div class="actions reveal">
+            <button class="btn btn--primary" type="button" data-go="projects">Explore My Work</button>
+            <!-- CV FILE: place your PDF at  assets/Syed_Ukasha_Shahid_CV.pdf  (same folder as profile.jpg) -->
+            <a class="btn btn--ghost" href="assets/Syed_Ukasha_Shahid_CV.pdf" download="Syed_Ukasha_Shahid_CV.pdf" target="_blank" rel="noopener">View My CV</a>
+          </div>
+
+          <button class="textlink reveal" type="button" data-go="contact">Get in touch</button>
+
+          <p class="home__hint reveal" aria-hidden="true">
+            <span class="key">←</span><span class="key key--pulse">→</span>
+            <span class="key-only">Use the arrow keys or the menu to move through the sections</span>
+            <span class="touch-only">Swipe sideways or open the menu to move through the sections</span>
+          </p>
+        </div>
+
+        <figure class="portrait reveal">
+          <div class="portrait__frame">
+            <!-- PROFILE PHOTO: replace assets/profile.jpg with any portrait to update it -->
+            <img src="assets/profile.jpg" width="800" height="1000"
+                 alt="Portrait of Syed Ukasha Shahid in a black suit, seated on a wooden stool against a dark studio backdrop"
+                 decoding="async">
+          </div>
+          <figcaption class="portrait__tag">BSCS · Class of 2028</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ---------- 02 ABOUT ---------- -->
+    <section class="panel panel--about" id="panel-about" data-panel="about" aria-labelledby="about-title" inert aria-hidden="true">
+      <div class="about">
+        <div class="about__main">
+          <h2 class="panel-title reveal" id="about-title" tabindex="-1">A little about me.</h2>
+          <p class="about__lead reveal">I'm a BS Computer Science student at Qarshi University with a foundation in programming, object-oriented programming, data structures, and database systems. I'm interested in building practical software and web applications, learning modern development techniques, and strengthening my problem-solving abilities through hands-on projects.</p>
+        </div>
+
+        <aside class="about__side">
+          <dl class="facts reveal">
+            <div class="fact"><dt>Degree</dt><dd>BS Computer Science</dd></div>
+            <div class="fact"><dt>University</dt><dd>Qarshi University</dd></div>
+            <div class="fact"><dt>Expected graduation</dt><dd>2028</dd></div>
+          </dl>
+
+          <blockquote class="goal reveal">
+            <p>My goal is to grow into a capable software developer by combining strong fundamentals with real-world project experience.</p>
+          </blockquote>
+
+          <div class="traits reveal">
+            <p class="traits__label">Strengths</p>
+            <ul class="chips chips--quiet">
+              <li>Problem solving</li><li>Analytical thinking</li><li>Quick learner</li>
+              <li>Communication</li><li>Teamwork</li><li>Time management</li>
+            </ul>
+            <p class="traits__langs">Speaks English and Urdu</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ---------- 03 SKILLS ---------- -->
+    <section class="panel panel--skills" id="panel-skills" data-panel="skills" aria-labelledby="skills-title" inert aria-hidden="true">
+      <div class="skills">
+        <header class="panel-head reveal">
+          <h2 class="panel-title" id="skills-title" tabindex="-1">What I work with.</h2>
+          <p class="legend"><span class="used-dot" aria-hidden="true"></span>Used in one of my projects</p>
+        </header>
+
+        <div class="skill-grid">
+          <article class="module module--langs reveal">
+            <h3 class="module__name">Programming languages</h3>
+            <ul class="langs">
+              <li>C</li><li>C++</li><li class="is-used">Java<span class="sr-only"> (used in a project)</span></li><li>Python</li><li>SQL</li>
+            </ul>
+          </article>
+
+          <article class="module module--web reveal">
+            <h3 class="module__name">Web development</h3>
+            <ul class="chips">
+              <li class="is-used">HTML5<span class="sr-only"> (used in a project)</span></li>
+              <li class="is-used">CSS3<span class="sr-only"> (used in a project)</span></li>
+            </ul>
+          </article>
+
+          <article class="module module--core reveal">
+            <h3 class="module__name">Core computer science</h3>
+            <ul class="chips">
+              <li class="is-used">Object-Oriented Programming<span class="sr-only"> (used in a project)</span></li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Database Management Systems</li>
+              <li>Operating Systems</li>
+            </ul>
+          </article>
+
+          <article class="module module--tools reveal">
+            <h3 class="module__name">Tools &amp; technologies</h3>
+            <ul class="chips">
+              <li class="is-used">Java Swing<span class="sr-only"> (used in a project)</span></li>
+              <li class="is-used">NetBeans<span class="sr-only"> (used in a project)</span></li>
+              <li>MySQL</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 04 PROJECTS ---------- -->
+    <section class="panel panel--projects" id="panel-projects" data-panel="projects" aria-labelledby="projects-title" inert aria-hidden="true">
+      <div class="projects">
+        <header class="panel-head reveal">
+          <h2 class="panel-title" id="projects-title" tabindex="-1">Things I've built.</h2>
+          <p class="panel-note">Previews are illustrations of each project, not screenshots.</p>
+        </header>
+
+        <div class="project-grid">
+          <!-- Project A -->
+          <article class="project reveal">
+            <!-- CSS-only illustration of a Java Swing desktop window -->
+            <div class="preview preview--swing" aria-hidden="true">
+              <div class="swing">
+                <div class="swing__bar"><span class="swing__title">Bus Management System</span><span class="swing__ctrls"><i></i><i></i><i></i></span></div>
+                <div class="swing__body">
+                  <ul class="swing__menu">
+                    <li class="on">Routes</li><li>Tickets</li><li>Passes</li><li>Buses</li><li>Staff</li><li>Feedback</li>
+                  </ul>
+                  <div class="swing__main">
+                    <div class="route"><span class="route__stop"></span><span class="route__line"><span class="route__bus"></span></span><span class="route__stop"></span><span class="route__line"></span><span class="route__stop"></span></div>
+                    <div class="swing__table"><span></span><span></span><span></span><span></span></div>
+                    <div class="ticket"><span class="ticket__stub"></span><span class="ticket__lines"><i></i><i></i></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__type">Academic project</p>
+              <h3 class="project__title">Bus Management System</h3>
+              <p class="project__desc">A desktop application designed to support bus management operations, including route scheduling, ticket booking, digital passes, bus allocation, staff management, and feedback management.</p>
+              <ul class="tags"><li>Java</li><li>Java Swing</li><li>OOP</li><li>NetBeans</li></ul>
+            </div>
+          </article>
+
+          <!-- Project B -->
+          <article class="project reveal">
+            <!-- CSS-only illustration of the Shineo website concept -->
+            <div class="preview preview--web" aria-hidden="true">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url"></span></div>
+                <div class="site">
+                  <div class="site__nav"><span class="site__logo">Shineo</span><span class="site__links"><i></i><i></i><i></i></span></div>
+                  <div class="site__hero"><span class="site__h"></span><span class="site__search"><i></i><b></b></span></div>
+                  <div class="site__cards">
+                    <span class="svc"><i></i><b></b><b></b></span>
+                    <span class="svc"><i></i><b></b><b></b></span>
+                    <span class="svc"><i></i><b></b><b></b></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__type">Web development project</p>
+              <h3 class="project__title">Shineo · Maid Finder Website</h3>
+              <p class="project__desc">A website concept that connects users with nearby domestic service providers, helping users explore and find suitable household services.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 05 EDUCATION ---------- -->
+    <section class="panel panel--education" id="panel-education" data-panel="education" aria-labelledby="education-title" inert aria-hidden="true">
+      <div class="education">
+        <header class="panel-head reveal">
+          <h2 class="panel-title" id="education-title" tabindex="-1">Where I've studied.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="stop reveal">
+            <p class="stop__year"><time datetime="2022">2022</time></p>
+            <h3 class="stop__title">Matriculation</h3>
+            <p class="stop__place">Nishat Boys High School</p>
+            <p class="stop__meta">Completed 2022</p>
+          </li>
+          <li class="stop reveal">
+            <p class="stop__year"><time datetime="2024">2024</time></p>
+            <h3 class="stop__title">Intermediate · ICS / Pre-Engineering</h3>
+            <p class="stop__place">Punjab Group of Colleges</p>
+            <p class="stop__meta">Completed 2024</p>
+          </li>
+          <li class="stop stop--current reveal">
+            <p class="stop__year">Now <span class="stop__to">→ <time datetime="2028">2028</time></span></p>
+            <h3 class="stop__title">BS Computer Science</h3>
+            <p class="stop__place">Qarshi University, Lahore, Pakistan</p>
+            <div class="semesters" role="img" aria-label="Currently in semester 5 of 8, expected graduation 2028">
+              <span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span>
+              <span class="now"></span><span></span><span></span><span></span>
+            </div>
+            <p class="stop__meta">Currently in 5th semester · Expected graduation 2028</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---------- 06 CONTACT ---------- -->
+    <section class="panel panel--contact" id="panel-contact" data-panel="contact" aria-labelledby="contact-title" inert aria-hidden="true">
+      <div class="contact">
+        <div class="contact__main">
+          <h2 class="contact__title reveal" id="contact-title" tabindex="-1">Let's build something meaningful.</h2>
+          <p class="contact__lead reveal">I'm interested in internship opportunities, entry-level software development roles, and opportunities to learn through practical projects.</p>
+          <div class="actions reveal">
+            <a class="btn btn--primary" href="mailto:syedukashashahid@gmail.com">Send an Email</a>
+            <a class="btn btn--ghost" href="tel:+923095236098">Call Me</a>
+            <a class="btn btn--ghost" href="assets/Syed_Ukasha_Shahid_CV.pdf" download="Syed_Ukasha_Shahid_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+
+        <dl class="contact__list reveal">
+          <div class="crow">
+            <dt>Email</dt>
+            <dd><span class="crow__value" id="email-value">syedukashashahid@gmail.com</span>
+              <button class="copy" type="button" data-copy="email-value" aria-label="Copy email address">Copy</button></dd>
+          </div>
+          <div class="crow">
+            <dt>Phone</dt>
+            <dd><span class="crow__value" id="phone-value">+92 309 5236098</span>
+              <button class="copy" type="button" data-copy="phone-value" aria-label="Copy phone number">Copy</button></dd>
+          </div>
+          <div class="crow">
+            <dt>Location</dt>
+            <dd><span class="crow__value">Lahore, Pakistan</span></dd>
+          </div>
+          <!-- PROFILE LINKS: when you have them, copy this block and fill in your real URL.
+          <div class="crow">
+            <dt>LinkedIn</dt>
+            <dd><a class="crow__value" href="https://www.linkedin.com/in/YOUR-NAME" target="_blank" rel="noopener">linkedin.com/in/YOUR-NAME</a></dd>
+          </div>
+          <div class="crow">
+            <dt>GitHub</dt>
+            <dd><a class="crow__value" href="https://github.com/YOUR-NAME" target="_blank" rel="noopener">github.com/YOUR-NAME</a></dd>
+          </div>
+          -->
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== STATUS BAR ============================== -->
+  <footer class="statusbar">
+    <p class="statusbar__left">BS Computer Science · Qarshi University</p>
+
+    <div class="pager" aria-label="Slide controls">
+      <button class="pager__btn" type="button" data-step="-1" aria-label="Previous section"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></button>
+      <p class="pager__count" aria-live="polite"><span id="count-current">01</span><span class="pager__sep">/</span><span id="count-total">06</span><span class="sr-only" id="count-name">Home</span></p>
+      <button class="pager__btn" type="button" data-step="1" aria-label="Next section"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></svg></button>
+    </div>
+
+    <p class="statusbar__right"><span class="status-dot" aria-hidden="true"></span><span class="statusbar__open">Open to opportunities</span><span class="statusbar__loc">Lahore, Pakistan</span></p>
+  </footer>
+
+</div>
+
+<!-- Small notice used by the Copy buttons -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
