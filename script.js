@@ -202,24 +202,7 @@
     }
   });
 
-  /* ---------- 7. Touch swipe (phones and tablets) ---------- */
-  let touchX = 0, touchY = 0, touchT = 0;
-  stage.addEventListener("touchstart", function (e) {
-    const t = e.changedTouches[0];
-    touchX = t.clientX; touchY = t.clientY; touchT = Date.now();
-  }, { passive: true });
-
-  stage.addEventListener("touchend", function (e) {
-    const t = e.changedTouches[0];
-    const dx = t.clientX - touchX;
-    const dy = t.clientY - touchY;
-    const quick = Date.now() - touchT < 600;
-    // Only count clear, mostly-horizontal swipes
-    if (quick && Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      goTo(current + (dx < 0 ? 1 : -1), { focus: false });
-    }
-  }, { passive: true });
-
+ 
   /* ---------- 8. Copy buttons (email / phone) ---------- */
   let toastTimer = null;
   function showToast(text) {
