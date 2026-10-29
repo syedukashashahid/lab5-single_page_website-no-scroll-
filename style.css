@@ -1213,3 +1213,11 @@ ol, ul { list-style: none; padding: 0; }
   .project, .preview > *, .route__bus, .svc, .nav__link::after { transition: none !important; }
   .project:hover { transform: none; }
 }
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.panel {
+  overflow: hidden;
+}
